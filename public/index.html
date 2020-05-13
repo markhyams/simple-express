@@ -2,8 +2,45 @@
 <html>
   <head>
     <title>My App</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <h2>My Awesome Droplet!</h2>
+    <main>
+      <h2>My Awesome Droplet!</h2>
+    </main>
+
+    <script>
+      function makeRed(el) {
+        el.style.cssText = "color: red; border: 1px solid red";
+      }
+
+      function makeBlack(el) {
+        el.style.cssText = "color: black; border: none";
+      }
+
+      let counter = 1;
+      let elem = document.querySelector('h2');
+
+      setInterval(() => {
+        if (counter % 2 === 0) {
+          makeRed(elem);
+        } else {
+          makeBlack(elem);
+        }
+
+        counter += 1;
+      }, 1000)
+
+    </script>
   </body>
 </html>
