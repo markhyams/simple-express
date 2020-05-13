@@ -12,6 +12,10 @@
         margin: 0 auto;
         text-align: center;
       }
+
+      h2 {
+        border: 3px solid green;
+      }
     </style>
   </head>
   <body>
@@ -21,11 +25,11 @@
 
     <script>
       function makeRed(el) {
-        el.style.cssText = "color: red; border: 1px solid red";
+        el.style.cssText = "color: green; border-color: black";
       }
 
       function makeBlack(el) {
-        el.style.cssText = "color: black; border: none";
+        el.style.cssText = "color: black; border-color: green";
       }
 
       let counter = 1;
